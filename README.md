@@ -1,4 +1,4 @@
-# Frontend Mentor - Testimonials FlexBox section
+
 * in progress
 
 live link: https://szymonrojek.github.io/testimonials-flexBox-section-main/
