@@ -1,7 +1,7 @@
-# Frontend Mentor - Testimonials FlexBox section
+
 * in progress
 
-live link [here](https://szymonrojek.github.io/testimonials-flexBox-section-main/)
+live link: https://szymonrojek.github.io/testimonials-flexBox-section-main/
 
 
 ![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)
