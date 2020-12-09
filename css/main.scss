@@ -1,4 +1,58 @@
 
-body {
-  background-color: yellow;
+*, 
+*::after, 
+*::before,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
 }
+
+
+.card {
+  min-width: 100px;
+  padding: 20px;
+}
+
+.flex-container {
+  background-color: rgb(213, 213, 144);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 778px) {
+  .flex-container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-one, 
+  .section-two {
+    flex-direction: column;
+  }
+ 
+}
+
+
+.section-one, .section-two {
+  display: flex;
+}
+
+.card-1, .card-3 {
+  flex-grow: 2;
+}
+
+.card-2, .card-4 {
+  flex-grow: 1;
+}
+
+@media (min-width: 778px) {
+  .aside {
+    max-width: 25%;
+  }
+}
+
+
+
