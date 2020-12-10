@@ -6,53 +6,95 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 100%;
 }
 
+body {
+  color: white;
+  font-size: 18px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: black;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center 
+}
 
 .card {
-  min-width: 100px;
   padding: 20px;
+}
+
+.card-1 {
+  background-color: rgb(188, 56, 56);
+}
+.card-2 {
+  background-color: rgb(89, 154, 89);
+}
+
+.card-3 {
+  background-color: rgb(122, 74, 168);
+}
+
+.card-4 {
+  background-color: cadetblue;
+}
+
+.card-5 {
+  background-color: rgb(129, 121, 121);
 }
 
 .flex-container {
   background-color: rgb(213, 213, 144);
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;   
 }
 
-@media (min-width: 778px) {
+@media (min-width: 767px) {
+  .section-one, 
+  .section-two {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card-1, .card-4 {
+    flex: 2;
+  }
+
+  .card-2, .card-3 {
+    flex: 1;
+  }
+
+  .flex-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px
+  }
+
+  .wrapper-section {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
   .flex-container {
     flex-direction: row;
   }
-}
-
-@media (max-width: 480px) {
-  .section-one, 
-  .section-two {
-    flex-direction: column;
+  
+  .wrapper-section {
+    flex: 3;
   }
- 
-}
 
-
-.section-one, .section-two {
-  display: flex;
-}
-
-.card-1, .card-3 {
-  flex-grow: 2;
-}
-
-.card-2, .card-4 {
-  flex-grow: 1;
-}
-
-@media (min-width: 778px) {
   .aside {
-    max-width: 25%;
+    flex: 1;
   }
 }
+
+
 
 
 
