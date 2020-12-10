@@ -12,11 +12,14 @@ body {
   color: white;
   font-size: 18px;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  background-color: black;
-  line-height: 30px;
+
+  line-height: 20px;
   display: flex;
   align-items: center;
-  justify-content: center 
+  justify-content: center;
+
+  background-color: hsl(210, 46%, 95%);
+  
 }
 
 .card {
@@ -24,18 +27,18 @@ body {
 }
 
 .card-1 {
-  background-color: rgb(188, 56, 56);
+  background-color: hsl(263, 55%, 52%);
 }
 .card-2 {
-  background-color: rgb(89, 154, 89);
+  background-color: hsl(217, 19%, 35%);
 }
 
 .card-3 {
-  background-color: rgb(122, 74, 168);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .card-4 {
-  background-color: cadetblue;
+  background-color: hsl(219, 29%, 14%)
 }
 
 .card-5 {
@@ -48,7 +51,7 @@ body {
   flex-direction: column;
   padding: 20px;
   max-width: 1440px;
-  margin: 0 auto;   
+  background-color: hsl(210, 46%, 95%);
 }
 
 @media (min-width: 767px) {

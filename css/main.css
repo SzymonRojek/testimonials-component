@@ -12,8 +12,7 @@ body {
   color: white;
   font-size: 18px;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  background-color: black;
-  line-height: 30px;
+  line-height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,6 +22,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #ecf2f8;
 }
 
 .card {
@@ -30,19 +30,19 @@ body {
 }
 
 .card-1 {
-  background-color: #bc3838;
+  background-color: #7541c8;
 }
 
 .card-2 {
-  background-color: #599a59;
+  background-color: #48556a;
 }
 
 .card-3 {
-  background-color: #7a4aa8;
+  background-color: white;
 }
 
 .card-4 {
-  background-color: cadetblue;
+  background-color: #19212e;
 }
 
 .card-5 {
@@ -60,7 +60,7 @@ body {
           flex-direction: column;
   padding: 20px;
   max-width: 1440px;
-  margin: 0 auto;
+  background-color: #ecf2f8;
 }
 
 @media (min-width: 767px) {
