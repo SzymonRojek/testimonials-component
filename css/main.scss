@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  color: white;
-  font-size: 18px;
+  color: hsl(0, 0%, 81%);
+  font-size: 13px;
   font-family: 'Barlow Semi Condensed', sans-serif;
 
   line-height: 20px;
@@ -42,7 +42,8 @@ body {
 }
 
 .card-5 {
-  background-color: rgb(129, 121, 121);
+  background-color: hsl(0, 0%, 100%);
+  color: rgba(72, 85, 106, 50%);
 }
 
 .flex-container {
@@ -97,7 +98,4 @@ body {
   }
 }
 
-
-
-
-
+// do colors exactly with style-guide file
