@@ -9,21 +9,20 @@ html {
 }
 
 body {
-  color: hsl(0, 0%, 81%);
-  font-size: 13px;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-
-  line-height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: hsl(0, 0%, 81%);
+  // font-size: 81.25%; // 13px
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 20px;
   background-color: hsl(210, 46%, 95%);
-  
 }
 
 .card {
   padding: 20px;
+  border-radius: 0.5rem;
 }
 
 .card-1 {
@@ -42,45 +41,43 @@ body {
 }
 
 .card-5 {
-  background-color: hsl(0, 0%, 100%);
   color: rgba(72, 85, 106, 50%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .flex-container {
-  background-color: rgb(213, 213, 144);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
   max-width: 1440px;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 4.44rem 1.5rem;
   background-color: hsl(210, 46%, 95%);
 }
 
-@media (min-width: 767px) {
-  .section-one, 
-  .section-two {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+.wrapper-section {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
 
+.section-one, 
+.section-two {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+@media (min-width: 767px) {
+  .flex-container {
+    margin: 4.385rem;
+  }
   .card-1, .card-4 {
     flex: 2;
   }
 
   .card-2, .card-3 {
     flex: 1;
-  }
-
-  .flex-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 20px
-  }
-
-  .wrapper-section {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 20px;
   }
 }
 
@@ -91,10 +88,12 @@ body {
   
   .wrapper-section {
     flex: 3;
+    // margin-bottom: 4.44rem;
   }
 
   .aside {
     flex: 1;
+    // margin-top: 4.44rem;
   }
 }
 

@@ -9,10 +9,6 @@ html {
 }
 
 body {
-  color: #cfcfcf;
-  font-size: 13px;
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  line-height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,11 +18,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #cfcfcf;
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 20px;
   background-color: #ecf2f8;
 }
 
 .card {
   padding: 20px;
+  border-radius: 0.5rem;
 }
 
 .card-1 {
@@ -46,33 +47,48 @@ body {
 }
 
 .card-5 {
-  background-color: white;
   color: #48556a;
+  background-color: white;
 }
 
 .flex-container {
-  background-color: #d5d590;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  max-width: 1440px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 20px;
-  max-width: 1440px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 4.44rem 1.5rem;
   background-color: #ecf2f8;
 }
 
+.wrapper-section {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.section-one,
+.section-two {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
 @media (min-width: 767px) {
-  .section-one,
-  .section-two {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 20px;
+  .flex-container {
+    margin: 4.385rem;
   }
   .card-1, .card-4 {
     -webkit-box-flex: 2;
@@ -83,22 +99,6 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-  }
-  .flex-container {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 20px;
-  }
-  .wrapper-section {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 20px;
   }
 }
 
