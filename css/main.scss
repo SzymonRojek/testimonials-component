@@ -52,7 +52,7 @@ body {
 }
 
 
-// styling the content of layout
+// styling childs of the container
 
 .card {
   padding: 1.63rem 2rem;
@@ -177,37 +177,6 @@ body {
 }
 
 
-@media (min-width: 767px) {
- .section-one, .section-two {
-   flex-direction: row;
-  }
- .section-one > * + * {
-    margin: 0 0 0 1.5rem;
-  }
-  .section-two  > * + *  {
-    margin: 0 0 0 1.5rem;
-  }
-  .card-1, .card-4 {
-    flex: 2;
-  }
-  .card-2, .card-3 {
-    flex: 1;
-  }
-}
-
-@media (min-width: 1024px) {
-  .flex-container {
-    flex-direction: row;
-  }
-  .wrapper-section {
-    flex: 3;
-  }
-  .aside {
-    flex: 1;
-    margin: 0 0 0 1.5rem;
-  }
-}
-
 // footer
 .footer__attribution {
   color: hsl(217, 19%, 35%);
@@ -225,3 +194,35 @@ body {
   color: #3b53b0;
 }
 
+// media q
+
+@media (min-width: 767px) {
+  .section-one, .section-two {
+    flex-direction: row;
+   }
+  .section-one > * + * {
+     margin: 0 0 0 1.5rem;
+   }
+   .section-two  > * + *  {
+     margin: 0 0 0 1.5rem;
+   }
+   .card-1, .card-4 {
+     flex: 2;
+   }
+   .card-2, .card-3 {
+     flex: 1;
+   }
+ }
+ 
+ @media (min-width: 1024px) {
+   .flex-container {
+     flex-direction: row;
+   }
+   .wrapper-section {
+     flex: 3;
+   }
+   .aside {
+     flex: 1;
+     margin: 0 0 0 1.5rem;
+   }
+ }
