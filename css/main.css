@@ -71,7 +71,13 @@ body {
 }
 
 .card-1 {
-  background-color: #7541c8;
+  background: url(/images/bg-pattern-quotation.svg) #7541c8 no-repeat;
+  background-position: 85% top;
+  background-size: 8rem 8.2rem;
+}
+
+.heading__text {
+  z-index: 4;
 }
 
 .card-2 {
@@ -103,7 +109,7 @@ body {
   margin-right: 1.2rem;
 }
 
-.clearfix:after {
+.clearfix::after {
   content: '';
   visibility: hidden;
   display: block;
