@@ -21,7 +21,7 @@ body {
 .card {
   padding: 20px;
   border-radius: 0.5rem;
-}
+} 
 
 .card-1 {
   background-color: hsl(263, 55%, 52%);
@@ -45,6 +45,7 @@ body {
 
 .flex-container {
   max-width: 1440px;
+  height: 100%;
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
