@@ -71,7 +71,7 @@ body {
 }
 
 .card-1 {
-  background: url(/images/bg-pattern-quotation.svg) #7541c8 no-repeat;
+  background: url(images/bg-pattern-quotation.svg) #7541c8 no-repeat;
   background-position: 85% top;
   background-size: 8rem 8.2rem;
 }
