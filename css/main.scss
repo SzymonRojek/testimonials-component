@@ -19,31 +19,6 @@ body {
 }
 
 
-.card {
-  padding: 20px;
-  border-radius: 0.5rem;
-} 
-
-.card-1 {
-  background-color: hsl(263, 55%, 52%);
-}
-.card-2 {
-  background-color: hsl(217, 19%, 35%);
-}
-
-.card-3 {
-  background-color: hsl(0, 0%, 100%);
-}
-
-.card-4 {
-  background-color: hsl(219, 29%, 14%)
-}
-
-.card-5 {
-  color: rgba(72, 85, 106, 50%);
-  background-color: hsl(0, 0%, 100%);
-}
-
 .flex-container {
   max-width: 1440px;
   display: flex;
@@ -75,6 +50,132 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+
+// styling the content of layout
+
+.card {
+  padding: 1.63rem 2rem;
+  border-radius: 0.5rem;
+} 
+
+.card-1 {
+  background-color: hsl(263, 55%, 52%);
+}
+.card-2 {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card-3 {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card-4 {
+  background-color: hsl(219, 29%, 14%)
+}
+
+.card-5 {
+  color: rgba(72, 85, 106, 50%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.card__head {
+  line-height: 17px;
+  letter-spacing: 0.5px;
+}
+.card__head-img {
+  height: 1.9rem;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.2rem;
+}
+
+.clearfix:after { 
+  content: '';
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.card-1 .card__head-img,
+.card-4 .card__head-img {
+  border: 2px solid #a775f1;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.title {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.card-1 .name, 
+.card-2 .name,
+.card-4 .name {
+  color: #fff;
+}
+
+.card-1 .title,
+.card-2 .title,
+.card-4 .title{
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.card-3 .name,
+.card-5 .name {
+  color: hsl(217, 19%, 35%);
+}
+
+.card-3 .title,
+.card-5 .title {
+  color: rgba(72, 85, 106, 0.50);
+}
+
+
+.heading__text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 1.2rem 0 3rem 0;
+}
+
+.card__detail-text {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.125rem;
+}
+
+.card-1 .heading__text,
+.card-2 .heading__text {
+  color: #fff
+}
+
+.card-4 .heading__text {
+  color: #ECF2F8;
+}
+
+.card-3 .heading__text,
+.card-5 .heading__text {
+  color: #48556A;
+}
+
+.card-1 .card__detail-text {
+  color: rgba(207, 207, 207, 0.70);
+}
+
+.card-2 .card__detail-text,
+.card-4 .card__detail-text {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.card-3 .card__detail-text,
+.card-5 .card__detail-text {
+  color: rgba(72, 85, 106, 0.70);
+}
+
 
 @media (min-width: 767px) {
  .section-one, .section-two {
@@ -112,7 +213,7 @@ body {
   color: hsl(217, 19%, 35%);
   font-size: 0.8rem;
   text-align: center;
-  padding: 0.5rem 0 0.7rem 0;
+  padding: 0.5rem 0 1rem 0;
   text-shadow: 7px 0px 17px rgba(255,255,255,0.92);
   letter-spacing: 1px;
 }
@@ -123,4 +224,4 @@ body {
   text-decoration: none;
   color: #3b53b0;
 }
-// do colors exactly with style-guide file
+
