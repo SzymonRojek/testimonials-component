@@ -14,12 +14,12 @@ body {
   color: hsl(0, 0%, 81%);
   font-size: 81.25%; // 13px
   font-family: 'Barlow Semi Condensed', sans-serif;
-  // line-height: 20px;
+  line-height: 20px;
   background-color: hsl(210, 46%, 95%);
 }
 
 .card {
-  // padding: 20px;
+  padding: 20px;
   border-radius: 0.5rem;
 } 
 
@@ -45,35 +45,45 @@ body {
 
 .flex-container {
   max-width: 1440px;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  // margin: 4.44rem 1.5rem;
+  margin: 4.44rem 1.5rem;
   background-color: hsl(210, 46%, 95%);
 }
 
-.wrapper-section {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+// > * + * select every element that is a sibling of another / adjacent sibling of something else. I want select the first one.
+
+.flex-container > * + *  {
+  margin: 1.5rem 0 0 0;
+}
+
+.wrapper-section > * + *  {
+  margin: 1.5rem 0 0 0;
+}
+
+.section-one > * + *  {
+  margin: 1.5rem 0 0 0;
+}
+
+.section-two > * + *  {
+  margin: 1.5rem 0 0 0;
 }
 
 .section-one, 
 .section-two {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (max-width: 767px) {
-  .flex-container {
-    gap: 1.5rem;
+@media (min-width: 767px) {
+ .section-one, .section-two {
+   flex-direction: row;
   }
-}
-@media (min-width: 768px) {
-  .flex-container {
-    // margin: 4.385rem;
+ .section-one > * + * {
+    margin: 0 0 0 1.5rem;
+  }
+  .section-two  > * + *  {
+    margin: 0 0 0 1.5rem;
   }
   .card-1, .card-4 {
     flex: 2;
@@ -89,11 +99,10 @@ body {
   }
   .wrapper-section {
     flex: 3;
-    // margin-bottom: 4.44rem;
   }
   .aside {
     flex: 1;
-    // margin-top: 4.44rem;
+    margin: 0 0 0 1.5rem;
   }
 }
 

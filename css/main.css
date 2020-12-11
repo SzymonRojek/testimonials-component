@@ -21,10 +21,12 @@ body {
   color: #cfcfcf;
   font-size: 81.25%;
   font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 20px;
   background-color: #ecf2f8;
 }
 
 .card {
+  padding: 20px;
   border-radius: 0.5rem;
 }
 
@@ -51,45 +53,57 @@ body {
 
 .flex-container {
   max-width: 1440px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.5rem;
+  margin: 4.44rem 1.5rem;
   background-color: #ecf2f8;
 }
 
-.wrapper-section {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.5rem;
+.flex-container > * + * {
+  margin: 1.5rem 0 0 0;
+}
+
+.wrapper-section > * + * {
+  margin: 1.5rem 0 0 0;
+}
+
+.section-one > * + * {
+  margin: 1.5rem 0 0 0;
+}
+
+.section-two > * + * {
+  margin: 1.5rem 0 0 0;
 }
 
 .section-one,
 .section-two {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-@media (max-width: 767px) {
-  .flex-container {
-    gap: 1.5rem;
+@media (min-width: 767px) {
+  .section-one, .section-two {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-}
-
-@media (min-width: 768px) {
+  .section-one > * + * {
+    margin: 0 0 0 1.5rem;
+  }
+  .section-two > * + * {
+    margin: 0 0 0 1.5rem;
+  }
   .card-1, .card-4 {
     -webkit-box-flex: 2;
         -ms-flex: 2;
@@ -118,6 +132,7 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    margin: 0 0 0 1.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
