@@ -18,7 +18,6 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
-
 .flex-container {
   max-width: 1440px;
   display: flex;
@@ -27,7 +26,7 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
-// > * + * select every element that is a sibling of another / adjacent sibling of something else. I want select the first one.
+// > * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one.
 
 .flex-container > * + *  {
   margin: 1.5rem 0 0 0;
@@ -52,7 +51,7 @@ body {
 }
 
 
-// styling childs of the container
+// styling children of the container
 
 .card {
   padding: 1.63rem 2rem;
