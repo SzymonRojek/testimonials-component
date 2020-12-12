@@ -18,7 +18,7 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
-.flex-container {
+.cards__container {
   max-width: 1440px;
   display: flex;
   flex-direction: column;
@@ -28,32 +28,31 @@ body {
 
 // > * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one.
 
-.flex-container > * + *  {
+.cards__container > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.wrapper-section > * + *  {
+.cards__wrapper-sections > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.section-one > * + *  {
+.cards__wrapper-section-one > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.section-two > * + *  {
+.cards__wrapper-section-two > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.section-one, 
-.section-two {
+.cards__wrapper-section-one, 
+.cards__wrapper-section-two {
   display: flex;
   flex-direction: column;
 }
 
-
 // styling children of the container
 
-.card {
+.cards {
   padding: 1.63rem 2rem;
   border-radius: 0.5rem;
 }
@@ -81,11 +80,13 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
-.card__head {
+// card header
+
+.card__header {
   line-height: 17px;
   letter-spacing: 0.5px;
 }
-.card__head-img {
+.card__header-img {
   height: 1.9rem;
   border-radius: 50%;
   float: left;
@@ -100,85 +101,89 @@ body {
   clear: both;
 }
 
-.card-1 .card__head-img,
-.card-4 .card__head-img {
+.card-1 .card__header-img,
+.card-4 .card__header-img {
   border: 2px solid #a775f1;
 }
 
-.name {
+.card__header-person {
   font-weight: 500;
+  font-size: 1rem;
 }
 
-.title {
+.card__header-graduate {
   font-size: 0.7rem;
   font-weight: 500;
 }
 
-.card-1 .name, 
-.card-2 .name,
-.card-4 .name {
+.card-1 .card__header-person, 
+.card-2 .card__header-person,
+.card-4 .card__header-person {
   color: #fff;
 }
 
-.card-1 .title,
-.card-2 .title,
-.card-4 .title{
+.card-1 .card__header-graduate,
+.card-2 .card__header-graduate,
+.card-4 .card__header-graduate{
   color: rgba(255, 255, 255, 0.50);
 }
 
-.card-3 .name,
-.card-5 .name {
+.card-3 .card__header-person,
+.card-5 .card__header-person {
   color: hsl(217, 19%, 35%);
 }
 
-.card-3 .title,
-.card-5 .title {
+.card-3 .card__header-graduate,
+.card-5 .card__header-graduate {
   color: rgba(72, 85, 106, 0.50);
 }
 
-.heading__text {
+// card description
+
+.card__description-heading {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem;
   padding: 1.2rem 0 1.4rem 0;
 }
 
-.card__detail-text {
+.card-1 .card__description-heading,
+.card-2 .card__description-heading {
+  color: #fff
+}
+
+.card-4 .card__description-heading {
+  color: #ECF2F8;
+}
+
+.card-3 .card__description-heading,
+.card-5 .card__description-heading {
+  color: #48556A;
+}
+
+.card__description-details {
   font-style: normal;
   font-weight: 500;
   line-height: 1.125rem;
 }
 
-.card-1 .heading__text,
-.card-2 .heading__text {
-  color: #fff
-}
-
-.card-4 .heading__text {
-  color: #ECF2F8;
-}
-
-.card-3 .heading__text,
-.card-5 .heading__text {
-  color: #48556A;
-}
-
-.card-1 .card__detail-text {
+.card-1 .card__description-details {
   color: rgba(207, 207, 207, 0.70);
 }
 
-.card-2 .card__detail-text,
-.card-4 .card__detail-text {
+.card-2 .card__description-details,
+.card-4 .card__description-details {
   color: rgba(255, 255, 255, 0.70);
 }
 
-.card-3 .card__detail-text,
-.card-5 .card__detail-text {
+.card-3 .card__description-details,
+.card-5 .card__description-details {
   color: rgba(72, 85, 106, 0.70);
 }
 
 
 // footer
+
 .footer__attribution {
   color: hsl(217, 19%, 35%);
   font-size: 0.8rem;
@@ -195,35 +200,46 @@ body {
   color: #3b53b0;
 }
 
-// media q
+// media queries
 
 @media (min-width: 767px) {
-  .section-one, .section-two {
+  .cards__wrapper-section-one, 
+  .cards__wrapper-section-two {
     flex-direction: row;
    }
-  .section-one > * + * {
+
+  .cards__wrapper-section-one > * + * {
      margin: 0 0 0 1.5rem;
    }
-   .section-two  > * + *  {
+
+   .cards__wrapper-section-two  > * + *  {
      margin: 0 0 0 1.5rem;
    }
+
    .card-1, .card-4 {
      flex: 2;
    }
+
    .card-2, .card-3 {
      flex: 1;
    }
  }
  
  @media (min-width: 1024px) {
-   .flex-container {
+   .cards__container {
      flex-direction: row;
    }
-   .wrapper-section {
+
+   .cards__wrapper-sections {
      flex: 3;
    }
-   .aside {
+
+   .last__card {
      flex: 1;
      margin: 0 0 0 1.5rem;
    }
- }
+
+   .card-5 {
+     padding-bottom: 4.8rem;
+   }
+}
