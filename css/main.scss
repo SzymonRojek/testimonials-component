@@ -31,11 +31,12 @@ body {
 
 // > * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one.
 
+
 .cards__container > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-sections > * + *  {
+.cards__wrapper-twoSections > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
@@ -58,7 +59,33 @@ body {
 .cards {
   padding: 1.63rem 2rem;
   border-radius: 0.5rem;
+  transition: transform 1s ease;
+  position: relative;
 }
+
+// cards animate box-shadow silky smooth performance:
+
+.pseudo-hover:hover {
+  transform: translateY(-.35em) scale(1.02);
+}
+
+.pseudo-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  box-shadow: 0 .5rem 3rem -.25em rgba(35, 21, 21, 0.3);
+  transition: opacity 1s ease;
+}
+
+.pseudo-hover:hover::after {
+  opacity: 1;
+}
+
+// bc-img (card-1) and bc-colors:
 
 .card-1 {
   background: url('../images/bg-pattern-quotation.svg') hsl(263, 55%, 52%) no-repeat;
@@ -83,7 +110,7 @@ body {
   background-color: hsl(0, 0%, 100%);
 }
 
-// card header
+// card header:
 
 .card__header {
   line-height: 17px;
@@ -141,7 +168,7 @@ body {
   color: rgba(72, 85, 106, 0.50);
 }
 
-// card description
+// card description:
 
 .card__description-heading {
   font-size: 1.25rem;
@@ -185,7 +212,7 @@ body {
 }
 
 
-// footer
+// footer:
 
 .footer__attribution {
   width: 100%;
@@ -205,7 +232,7 @@ body {
   color: rgba(255, 255, 255, 0.70);
 }
 
-// media queries
+// media queries:
 
 @media (min-width: 767px) {
   .cards__wrapper-section-one, 
@@ -241,16 +268,16 @@ body {
      flex-direction: row;
    }
 
-   .cards__wrapper-sections {
+   .cards__wrapper-twoSections {
      flex: 3;
    }
 
-   .last__card {
+   .last__section {
      flex: 1;
      margin: 0 0 0 1.5rem;
    }
 
    .card-5 {
-     padding-bottom: 4.8rem;
+     height: 100%;
    }
 }

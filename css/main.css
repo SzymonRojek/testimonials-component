@@ -48,7 +48,7 @@ body {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-sections > * + * {
+.cards__wrapper-twoSections > * + * {
   margin: 1.5rem 0 0 0;
 }
 
@@ -74,6 +74,34 @@ body {
 .cards {
   padding: 1.63rem 2rem;
   border-radius: 0.5rem;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  position: relative;
+}
+
+.pseudo-hover:hover {
+  -webkit-transform: translateY(-0.35em) scale(1.02);
+          transform: translateY(-0.35em) scale(1.02);
+}
+
+.pseudo-hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
+          box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.pseudo-hover:hover::after {
+  opacity: 1;
 }
 
 .card-1 {
@@ -253,19 +281,19 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .cards__wrapper-sections {
+  .cards__wrapper-twoSections {
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
   }
-  .last__card {
+  .last__section {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     margin: 0 0 0 1.5rem;
   }
   .card-5 {
-    padding-bottom: 4.8rem;
+    height: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
