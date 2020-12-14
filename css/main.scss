@@ -3,17 +3,33 @@ $font-primary: 'Barlow Semi Condensed', sans-serif;
 
 // color-fonts:
 $color-primary__white: rgb(255, 255, 255);
-$color__gray-light: rgb(236, 242, 248);
-$color__gray-dark: rgb(72, 85, 106);
+$color__grey-light: rgb(236, 242, 248);
+$color__grey-dark: rgb(72, 85, 106);
 
 
 // background-color:
-$base-bc__gray-light: rgb(236, 242, 248);
+$base-bc__grey-light: rgb(236, 242, 248);
 $bc__white: rgb(255, 255, 255);
-$bc__gray-dark: rgb(72, 85, 106);
+$bc__grey-dark: rgb(72, 85, 106);
 $bc__black-dark: rgb(25, 33, 46);
 $bc__violet-light: rgb(167, 117, 241);
 $bc__violet-dark: rgb(117, 65, 200);
+
+
+/* jak nazwać te zmienne? Odnoszą się one do tekstu
+// opacity
+rgba(255, 255, 255, 0.50);  
+rgba(255, 255, 255, 0.70);
+rgba(72, 85, 106, 0.50);
+rgba(72, 85, 106, 0.70);
+
+rgba(255, 255, 255, 0.70);
+rgba(207, 207, 207, 0.70);
+
+//box-shadow
+rgba(35, 21, 21, 0.30); // shadow__gray
+
+*/
 
 *, 
 *::after, 
@@ -30,7 +46,7 @@ html {
 }
 
 body {
-  background-color: $base-bc__gray-light;
+  background-color: $base-bc__grey-light;
 }
 
 .component__wrapper {
@@ -47,7 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 4.44rem 1.5rem;
-  background-color: $base-bc__gray-light;
+  background-color: $base-bc__grey-light;
 }
 
 // footer
@@ -124,7 +140,7 @@ body {
   right: 0;
   bottom: 0;
   opacity: 0;
-  box-shadow: 0 .5rem 3rem -.25em rgba(35, 21, 21, 0.3);
+  box-shadow: 0 .5rem 3rem -.25em rgba(35, 21, 21, 0.30);
   transition: opacity 1s ease;
 }
 
@@ -141,7 +157,7 @@ body {
 }
 
 .card-2 {
-  background-color: $bc__gray-dark;
+  background-color: $bc__grey-dark;
 }
 
 .card-3 {
@@ -207,7 +223,7 @@ body {
 
 .card-3 .card__header-person,
 .card-5 .card__header-person {
-  color: $color__gray-dark;
+  color: $color__grey-dark; 
 }
 
 .card-3 .card__header-graduate,
@@ -234,12 +250,12 @@ body {
 }
 
 .card-4 .card__description-heading {
-  color: $color__gray-light;
+  color: $color__grey-light;
 }
 
 .card-3 .card__description-heading,
 .card-5 .card__description-heading {
-  color: $color__gray-dark;
+  color: $color__grey-dark;
 }
 
 .card__description-blockquote{
