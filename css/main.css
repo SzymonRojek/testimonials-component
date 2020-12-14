@@ -209,24 +209,24 @@ body {
   color: #48556A;
 }
 
-.card__description-details {
+.card__description-blockquote {
   font-style: normal;
   font-weight: 500;
   line-height: 1.125rem;
   padding: 1rem 0 1.4rem 0;
 }
 
-.card-1 .card__description-details {
+.card-1 .card__description-blockquote {
   color: rgba(207, 207, 207, 0.7);
 }
 
-.card-2 .card__description-details,
-.card-4 .card__description-details {
+.card-2 .card__description-blockquote,
+.card-4 .card__description-blockquote {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.card-3 .card__description-details,
-.card-5 .card__description-details {
+.card-3 .card__description-blockquote,
+.card-5 .card__description-blockquote {
   color: rgba(72, 85, 106, 0.7);
 }
 
