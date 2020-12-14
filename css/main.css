@@ -184,11 +184,15 @@ body {
   color: rgba(72, 85, 106, 0.5);
 }
 
+.card__description {
+  height: 100%;
+  padding-top: 2rem;
+}
+
 .card__description-heading {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem;
-  padding: 1.2rem 0 1.4rem 0;
 }
 
 .card-1 .card__description-heading,
@@ -209,6 +213,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: 1.125rem;
+  padding: 1rem 0 1.4rem 0;
 }
 
 .card-1 .card__description-details {
