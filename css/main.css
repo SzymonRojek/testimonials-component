@@ -8,15 +8,19 @@ html {
           box-sizing: border-box;
 }
 
-body {
+:root {
   font-size: 81.25%;
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
   background-color: #ecf2f8;
 }
 
 .component__wrapper {
-  margin: 0 auto;
+  min-height: 100vh;
   max-width: 1440px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,6 +48,27 @@ body {
   background-color: #ecf2f8;
 }
 
+.footer__attribution {
+  width: 100%;
+  padding: 0.5rem 0 1rem 0;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #19212e;
+  border-top: 2px solid #a775f1;
+}
+
+.attribution-link {
+  display: inline-block;
+  padding-top: 0.5em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 
+> * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one. 
+*/
 .cards__container > * + * {
   margin: 1.5rem 0 0 0;
 }
@@ -165,7 +190,7 @@ body {
 .card-1 .card__header-person,
 .card-2 .card__header-person,
 .card-4 .card__header-person {
-  color: #fff;
+  color: white;
 }
 
 .card-1 .card__header-graduate,
@@ -197,16 +222,16 @@ body {
 
 .card-1 .card__description-heading,
 .card-2 .card__description-heading {
-  color: #fff;
+  color: white;
 }
 
 .card-4 .card__description-heading {
-  color: #ECF2F8;
+  color: #ecf2f8;
 }
 
 .card-3 .card__description-heading,
 .card-5 .card__description-heading {
-  color: #48556A;
+  color: #48556a;
 }
 
 .card__description-blockquote {
@@ -228,24 +253,6 @@ body {
 .card-3 .card__description-blockquote,
 .card-5 .card__description-blockquote {
   color: rgba(72, 85, 106, 0.7);
-}
-
-.footer__attribution {
-  width: 100%;
-  padding: 0.5rem 0 1rem 0;
-  color: #fff;
-  font-size: 0.8rem;
-  text-align: center;
-  letter-spacing: 1px;
-  background-color: #19212e;
-  border-top: 2px solid #a775f1;
-}
-
-.attribution-link {
-  display: inline-block;
-  padding-top: 0.5em;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 @media (min-width: 767px) {
@@ -272,9 +279,24 @@ body {
         -ms-flex: 1;
             flex: 1;
   }
+  .card__description-heading {
+    line-height: 1.7rem;
+  }
+  .card__description-blockquote {
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .component__wrapper {
+    position: relative;
+  }
+  .footer__attribution {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
   .cards__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

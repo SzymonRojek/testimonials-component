@@ -1,3 +1,20 @@
+
+$font-primary: 'Barlow Semi Condensed', sans-serif;
+
+// color-fonts:
+$color-primary__white: rgb(255, 255, 255);
+$color__gray-light: rgb(236, 242, 248);
+$color__gray-dark: rgb(72, 85, 106);
+
+
+// background-color:
+$base-bc__gray-light: rgb(236, 242, 248);
+$bc__white: rgb(255, 255, 255);
+$bc__gray-dark: rgb(72, 85, 106);
+$bc__black-dark: rgb(25, 33, 46);
+$bc__violet-light: rgb(167, 117, 241);
+$bc__violet-dark: rgb(117, 65, 200);
+
 *, 
 *::after, 
 *::before,
@@ -7,15 +24,19 @@ html {
   box-sizing: border-box;
 }
 
-body {
+:root {
   font-size: 81.25%; // 13px
-  font-family: 'Barlow Semi Condensed', sans-serif;
-  background-color: hsl(210, 46%, 95%);
+  font-family: $font-primary;
+}
+
+body {
+  background-color: $base-bc__gray-light;
 }
 
 .component__wrapper {
-  margin: 0 auto;
+  min-height: 100vh;
   max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,10 +47,36 @@ body {
   display: flex;
   flex-direction: column;
   margin: 4.44rem 1.5rem;
-  background-color: hsl(210, 46%, 95%);
+  background-color: $base-bc__gray-light;
 }
 
-// > * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one.
+// footer
+
+.footer__attribution {
+  width: 100%;
+  padding: 0.5rem 0 1rem 0;
+  color: $color-primary__white;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: $bc__black-dark;
+  border-top: 2px solid $bc__violet-light;
+
+
+}
+
+.attribution-link {
+  display: inline-block;
+  padding-top: 0.5em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+// cards:
+
+/* 
+> * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one. 
+*/
 
 
 .cards__container > * + *  {
@@ -88,26 +135,26 @@ body {
 // bc-img (card-1) and bc-colors:
 
 .card-1 {
-  background: url('../images/bg-pattern-quotation.svg') hsl(263, 55%, 52%) no-repeat;
+  background: url('../images/bg-pattern-quotation.svg') $bc__violet-dark no-repeat;
   background-position: 85% top;
   background-size: 8rem 8.2rem;
 }
 
 .card-2 {
-  background-color: hsl(217, 19%, 35%);
+  background-color: $bc__gray-dark;
 }
 
 .card-3 {
-  background-color: hsl(0, 0%, 100%);
+  background-color: $bc__white;
 }
 
 .card-4 {
-  background-color: hsl(219, 29%, 14%)
+  background-color: $bc__black-dark;
 }
 
 .card-5 {
   color: rgba(72, 85, 106, 50%);
-  background-color: hsl(0, 0%, 100%);
+  background-color: $bc__white;
 }
 
 // card header:
@@ -133,7 +180,7 @@ body {
 
 .card-1 .card__header-img,
 .card-4 .card__header-img {
-  border: 2px solid #a775f1;
+  border: 2px solid $bc__violet-light;
 }
 
 .card__header-person {
@@ -149,7 +196,7 @@ body {
 .card-1 .card__header-person, 
 .card-2 .card__header-person,
 .card-4 .card__header-person {
-  color: #fff;
+  color: $color-primary__white;
 }
 
 .card-1 .card__header-graduate,
@@ -160,7 +207,7 @@ body {
 
 .card-3 .card__header-person,
 .card-5 .card__header-person {
-  color: hsl(217, 19%, 35%);
+  color: $color__gray-dark;
 }
 
 .card-3 .card__header-graduate,
@@ -183,16 +230,16 @@ body {
 
 .card-1 .card__description-heading,
 .card-2 .card__description-heading {
-  color: #fff
+  color: $color-primary__white;
 }
 
 .card-4 .card__description-heading {
-  color: #ECF2F8;
+  color: $color__gray-light;
 }
 
 .card-3 .card__description-heading,
 .card-5 .card__description-heading {
-  color: #48556A;
+  color: $color__gray-dark;
 }
 
 .card__description-blockquote{
@@ -217,26 +264,6 @@ body {
 }
 
 
-// footer:
-
-.footer__attribution {
-  width: 100%;
-  padding: 0.5rem 0 1rem 0;
-  color: #fff;
-  font-size: 0.8rem;
-  text-align: center;
-  letter-spacing: 1px;
-  background-color: hsl(219, 29%, 14%);
-  border-top: 2px solid #a775f1;;
-}
-
-.attribution-link {
-  display: inline-block;
-  padding-top: 0.5em;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.70);
-}
-
 // media queries:
 
 @media (min-width: 767px) {
@@ -260,24 +287,42 @@ body {
    .card-2, .card-3 {
      flex: 1;
    }
+
+
+  .card__description-heading {
+    line-height: 1.7rem;
+  }
+
+  .card__description-blockquote {
+    line-height: 1.5rem;
+  }
  }
  
  @media (min-width: 1024px) {
+  .component__wrapper {
+    position: relative;
+  }
 
-   .cards__container {
-     flex-direction: row;
-   }
+  .footer__attribution {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .cards__container {
+    flex-direction: row;
+  }
 
-   .cards__wrapper-twoSections {
-     flex: 3;
-   }
+  .cards__wrapper-twoSections {
+    flex: 3;
+  }
 
-   .last__section {
-     flex: 1;
-     margin: 0 0 0 1.5rem;
-   }
+  .last__section {
+    flex: 1;
+    margin: 0 0 0 1.5rem;
+  }
 
-   .card-5 {
-     height: 100%;
-   }
+  .card-5 {
+    height: 100%;
+  }
 }
