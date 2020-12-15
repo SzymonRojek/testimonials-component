@@ -62,11 +62,13 @@ html {
 }
 
 .footer__attribution {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem 0 1rem 0;
   color: $color-primary__white;
   font-size: 0.8rem;
-  text-align: center;
   letter-spacing: 1px;
   background-color: $bc__black-dark;
   border-top: 2px solid $bc__violet-light;
