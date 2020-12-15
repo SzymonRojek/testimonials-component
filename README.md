@@ -13,6 +13,7 @@
 
 ## **For this challenge I've used:**
 * HTML semantic elements;
+* Invisible content just for Screen Reader users;
 * BEM naming;
 * Pseudo-elements for background images and box-shadow silky smooth performance;
 * SASS;
@@ -20,16 +21,11 @@
 
 ### Building project - description challenge:
 
-My challenge was to build out this testimonials grid section and get it looking as close to the design as [possible](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
+My challenge was to build out this testimonials section and get it looking as close to the design as [possible](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
 
-I could use any tools I like to help me complete the challenge. Do to the fact that I do not feel comfortable with grid yet, instead of it I have used the flexBox, why? Firstly, I want to achive very well the flexBox because is very powerfull technology and I want to familiarize myself with all it's details.
+I could use any tools I like to help me complete the challenge. Do to the fact that I do not feel comfortable with grid yet, instead of it I have used the flexBox. Firstly, I need to achive very well flexBox because is very powerfull technology and I want to familiarize myself with all it's details.
 
-After a few days of adventure with flexbox, I can say that the flexBox gave me few problems, for example how to deal with gaps. It was a very tricky for me to create equal gaps between the boxes. Normally I would use flex-gap but Safari doesn’t support it yet (nor stable Chrome) so I can’t just plop it out there. At the end it was necessary to set the margin for different boxes and change it at different resolutions by @media.
-
-Already at this stage of learning I know that flexbox is not good for building complex layouts in the general sense but it is amazing for setting content inside of elements. 
-
-#### **ToDo:**
-- Screenreader only text with sr-only class;
+Already at this stage of learning I know that flexbox is not good for building complex layouts in the general sense but definitely it is amazing for setting content inside of elements. 
 
 ## Setup
 
