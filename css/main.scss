@@ -1,35 +1,24 @@
 
 $font-primary: 'Barlow Semi Condensed', sans-serif;
 
-// color-fonts:
+// fonts-color:
 $color-primary__white: rgb(255, 255, 255);
-$color__grey-light: rgb(236, 242, 248);
-$color__grey-dark: rgb(72, 85, 106);
-
-
+      
+$color__gray-100:rgb(236, 242, 248);
+$color__gray-200:rgba(255, 255, 255, 0.70);
+$color__gray-300:rgba(207, 207, 207, 0.70);
+$color__gray-400:rgba(255, 255, 255, 0.50); 
+$color__gray-500:rgba(72, 85, 106, 0.70);
+$color__gray-600:rgba(72, 85, 106, 0.50);
+$color__gray-700:rgb(72, 85, 106);
+      
 // background-color:
-$base-bc__grey-light: rgb(236, 242, 248);
+$base-bc__gray-100: rgb(236, 242, 248);
 $bc__white: rgb(255, 255, 255);
-$bc__grey-dark: rgb(72, 85, 106);
+$bc__gray-700: rgb(72, 85, 106);
 $bc__black-dark: rgb(25, 33, 46);
 $bc__violet-light: rgb(167, 117, 241);
-$bc__violet-dark: rgb(117, 65, 200);
-
-
-/* jak nazwać te zmienne? Odnoszą się one do tekstu
-// opacity
-rgba(255, 255, 255, 0.50);  
-rgba(255, 255, 255, 0.70);
-rgba(72, 85, 106, 0.50);
-rgba(72, 85, 106, 0.70);
-
-rgba(255, 255, 255, 0.70);
-rgba(207, 207, 207, 0.70);
-
-//box-shadow
-rgba(35, 21, 21, 0.30); // shadow__gray
-
-*/
+$bc__violet-dark:rgb(117, 65, 200);
 
 *, 
 *::after, 
@@ -40,20 +29,16 @@ html {
   box-sizing: border-box;
 }
 
-:root {
+html {
   font-size: 81.25%; // 13px
   font-family: $font-primary;
-}
-
-body {
-  background-color: $base-bc__grey-light;
+  background-color: $base-bc__gray-100;
 }
 
 .screen-reader-only {
   position: absolute;
   height: 1px;
   width: 1px;
-  clip: rect(1px 1px 1px 1px); // IE 6 and 7
   clip: rect(1px,1px,1px,1px);
   clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
   overflow: hidden !important;
@@ -73,10 +58,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 4.44rem 1.5rem;
-  background-color: $base-bc__grey-light;
+  background-color: $base-bc__gray-100;
 }
-
-// footer
 
 .footer__attribution {
   width: 100%;
@@ -87,18 +70,14 @@ body {
   letter-spacing: 1px;
   background-color: $bc__black-dark;
   border-top: 2px solid $bc__violet-light;
-
-
 }
 
 .attribution-link {
   display: inline-block;
   padding-top: 0.5em;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.70);
+  color: $color__gray-200;
 }
-
-// cards:
 
 /* 
 > * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one. 
@@ -127,16 +106,12 @@ body {
   flex-direction: column;
 }
 
-// styling children of the container
-
 .cards {
   padding: 1.63rem 2rem;
   border-radius: 0.5rem;
   transition: transform 1s ease;
   position: relative;
 }
-
-// cards animate box-shadow silky smooth performance:
 
 .pseudo-hover:hover {
   transform: translateY(-0.35em) scale(1.02);
@@ -158,8 +133,6 @@ body {
   opacity: 1;
 }
 
-// bc-img (card-1) and bc-colors:
-
 .card-1 {
   background: url('../images/bg-pattern-quotation.svg') $bc__violet-dark no-repeat;
   background-position: 85% top;
@@ -167,7 +140,7 @@ body {
 }
 
 .card-2 {
-  background-color: $bc__grey-dark;
+  background-color: $bc__gray-700;
 }
 
 .card-3 {
@@ -179,11 +152,9 @@ body {
 }
 
 .card-5 {
-  color: rgba(72, 85, 106, 50%);
+  color: $color__gray-600;
   background-color: $bc__white;
 }
-
-// card header:
 
 .card__header {
   line-height: 17px;
@@ -228,20 +199,18 @@ body {
 .card-1 .card__header-graduate,
 .card-2 .card__header-graduate,
 .card-4 .card__header-graduate{
-  color: rgba(255, 255, 255, 0.50);
+  color: $color__gray-400;
 }
 
 .card-3 .card__header-person,
 .card-5 .card__header-person {
-  color: $color__grey-dark; 
+  color: $color__gray-700; 
 }
 
 .card-3 .card__header-graduate,
 .card-5 .card__header-graduate {
-  color: rgba(72, 85, 106, 0.50);
+  color: $color__gray-600;
 }
-
-// card description:
 
 .card__description {
   height: 100%;
@@ -260,12 +229,12 @@ body {
 }
 
 .card-4 .card__description-heading {
-  color: $color__grey-light;
+  color: $color__gray-100;
 }
 
 .card-3 .card__description-heading,
 .card-5 .card__description-heading {
-  color: $color__grey-dark;
+  color: $color__gray-700;
 }
 
 .card__description-blockquote{
@@ -276,21 +245,18 @@ body {
 }
 
 .card-1 .card__description-blockquote{
-  color: rgba(207, 207, 207, 0.70);
+  color: $color__gray-300;
 }
 
 .card-2 .card__description-blockquote,
 .card-4 .card__description-blockquote{
-  color: rgba(255, 255, 255, 0.70);
+  color: $color__gray-200;
 }
 
 .card-3 .card__description-blockquote,
 .card-5 .card__description-blockquote{
-  color: rgba(72, 85, 106, 0.70);
+  color: $color__gray-500;
 }
-
-
-// media queries:
 
 @media (min-width: 767px) {
   .cards__wrapper-section-one, 
@@ -314,7 +280,6 @@ body {
      flex: 1;
    }
 
-
   .card__description-heading {
     line-height: 1.7rem;
   }
@@ -335,6 +300,7 @@ body {
     right: 0;
     bottom: 0;
   }
+
   .cards__container {
     flex-direction: row;
   }

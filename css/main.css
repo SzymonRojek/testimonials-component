@@ -1,18 +1,3 @@
-@charset "UTF-8";
-/* jak nazwać te zmienne? Odnoszą się one do tekstu
-// opacity
-rgba(255, 255, 255, 0.50);  
-rgba(255, 255, 255, 0.70);
-rgba(72, 85, 106, 0.50);
-rgba(72, 85, 106, 0.70);
-
-rgba(255, 255, 255, 0.70);
-rgba(207, 207, 207, 0.70);
-
-//box-shadow
-rgba(35, 21, 21, 0.30); // shadow__gray
-
-*/
 *,
 *::after,
 *::before,
@@ -23,12 +8,9 @@ html {
           box-sizing: border-box;
 }
 
-:root {
+html {
   font-size: 81.25%;
   font-family: "Barlow Semi Condensed", sans-serif;
-}
-
-body {
   background-color: #ecf2f8;
 }
 
@@ -36,7 +18,6 @@ body {
   position: absolute;
   height: 1px;
   width: 1px;
-  clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
           clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
@@ -174,7 +155,7 @@ body {
 }
 
 .card-5 {
-  color: #48556a;
+  color: rgba(72, 85, 106, 0.5);
   background-color: white;
 }
 
