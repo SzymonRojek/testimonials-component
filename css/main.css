@@ -118,6 +118,7 @@ html {
 .cards {
   padding: 1.63rem 2rem;
   border-radius: 0.5rem;
+  background-color: #ecf2f8;
   -webkit-transition: -webkit-transform 1s ease;
   transition: -webkit-transform 1s ease;
   transition: transform 1s ease;
