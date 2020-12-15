@@ -18,10 +18,9 @@
 
 ### Building project - description challenge:
 
-I could use any tools I like to help me to complete the challenge. Do to the fact that I do not feel comfortable with grid yet, instead of it I have used the flexBox. Firstly, I need to achive very well flexBox because is very powerfull technology and I want to familiarize myself with all it's details.
+I could use any tools I like to help me to complete the challenge. Due to the fact that I do not feel comfortable with the grid yet, instead of it, I have used the flexBox. Firstly, I need to master the flexBox because is a very powerful technology and I want to familiarize with all its details.
 
-Already at this stage of learning I know that the flexbox is not good for building complex layouts in the general sense but definitely it is amazing for setting content inside of elements. 
-
+Already at this stage of learning, I know that the flexbox is not good for building complex layouts in the general sense but definitely it is amazing for setting content inside of elements.
 ## Setup
 
 Clone this repo to your desktop and run this project locally using npm to install all the dependencies.
