@@ -182,6 +182,29 @@ html {
   background-color: white;
 }
 
+.card:hover {
+  -webkit-transform: translateY(-0.35em) scale(1.02);
+          transform: translateY(-0.35em) scale(1.02);
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  -webkit-box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
+          box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
 /*
 > * + * select every element that is a sibling of another 
 / adjacent sibling of something else - set the margin between boxes.
@@ -200,29 +223,6 @@ html {
 
 .cards__wrapperSections-two > * + * {
   margin: 1.5rem 0 0 0;
-}
-
-.pseudo-hover:hover {
-  -webkit-transform: translateY(-0.35em) scale(1.02);
-          transform: translateY(-0.35em) scale(1.02);
-}
-
-.pseudo-hover::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  -webkit-box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
-          box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
-
-.pseudo-hover:hover::after {
-  opacity: 1;
 }
 
 .card-1 .card__header-img,

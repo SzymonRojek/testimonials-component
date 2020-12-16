@@ -169,6 +169,27 @@ html {
       color: $color__gray-600;
       background-color: $bc__white;
     }
+
+    // box shadow sily smooth performance on hover
+    &:hover {
+      transform: translateY(-0.35em) scale(1.02);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      box-shadow: 0 .5rem 3rem -.25em rgba(35, 21, 21, 0.30);
+      transition: opacity 1s ease;
+    }
+    
+    &:hover::after {
+      opacity: 1;
+    }
 }
 
 /*
@@ -192,29 +213,6 @@ html {
   margin: 1.5rem 0 0 0;
 }
 
-// box shadow hover smooth performance:
-
-.pseudo-hover:hover {
-  transform: translateY(-0.35em) scale(1.02);
-}
-
-.pseudo-hover::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  box-shadow: 0 .5rem 3rem -.25em rgba(35, 21, 21, 0.30);
-  transition: opacity 1s ease;
-}
-
-.pseudo-hover:hover::after {
-  opacity: 1;
-}
-
-// set bcolor and color 
 .card-1 .card__header-img,
 .card-4 .card__header-img {
   border: 2px solid $bc__violet-light;
