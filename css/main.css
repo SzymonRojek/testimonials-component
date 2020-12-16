@@ -96,8 +96,84 @@ html {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* 
-> * + * select every element that is a sibling of another / adjacent sibling of something else. I want to select the first one. 
+.card {
+  padding: 1.63rem 2rem;
+  border-radius: 0.5rem;
+  background-color: #ecf2f8;
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  position: relative;
+}
+
+.card-1 {
+  background: url("../images/bg-pattern-quotation.svg") #7541c8 no-repeat;
+  background-position: 85% top;
+  background-size: 8rem 8.2rem;
+}
+
+.card-2 {
+  background-color: #48556a;
+}
+
+.card-3 {
+  background-color: white;
+}
+
+.card-4 {
+  background-color: #19212e;
+}
+
+.card-5 {
+  color: rgba(72, 85, 106, 0.5);
+  background-color: white;
+}
+
+.card .card__header {
+  line-height: 17px;
+  letter-spacing: 0.5px;
+}
+
+.card .card__header-img {
+  height: 2rem;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.2rem;
+}
+
+.card .card__header-person {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.card .card__header-graduate {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.card .card__description {
+  padding-top: 1.5rem;
+}
+
+.card .card__description-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card .card__description-blockquote {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4rem;
+  padding-top: 1.5rem;
+}
+
+/*
+> * + * select every element that is a sibling of another 
+/ adjacent sibling of something else - set the margin between boxes.
 */
 .cards__container > * + * {
   margin: 1.5rem 0 0 0;
@@ -126,17 +202,6 @@ html {
           flex-direction: column;
 }
 
-.cards {
-  padding: 1.63rem 2rem;
-  border-radius: 0.5rem;
-  background-color: #ecf2f8;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  position: relative;
-}
-
 .pseudo-hover:hover {
   -webkit-transform: translateY(-0.35em) scale(1.02);
           transform: translateY(-0.35em) scale(1.02);
@@ -158,51 +223,6 @@ html {
 
 .pseudo-hover:hover::after {
   opacity: 1;
-}
-
-.card-1 {
-  background: url("../images/bg-pattern-quotation.svg") #7541c8 no-repeat;
-  background-position: 85% top;
-  background-size: 8rem 8.2rem;
-}
-
-.card-2 {
-  background-color: #48556a;
-}
-
-.card-3 {
-  background-color: white;
-}
-
-.card-4 {
-  background-color: #19212e;
-}
-
-.card-5 {
-  color: rgba(72, 85, 106, 0.5);
-  background-color: white;
-}
-
-.card__header {
-  line-height: 17px;
-  letter-spacing: 0.5px;
-}
-
-.card__header-img {
-  height: 2rem;
-  border-radius: 50%;
-  float: left;
-  margin-right: 1.2rem;
-}
-
-.card__header-person {
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.card__header-graduate {
-  font-size: 0.7rem;
-  font-weight: 500;
 }
 
 .card-1 .card__header-img,
@@ -230,25 +250,6 @@ html {
 .card-3 .card__header-graduate,
 .card-5 .card__header-graduate {
   color: rgba(72, 85, 106, 0.5);
-}
-
-.card__description {
-  padding-top: 1.5rem;
-}
-
-.card__description-heading {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.7rem;
-  width: 100%;
-  height: 100%;
-}
-
-.card__description-blockquote {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  padding-top: 1.5rem;
 }
 
 .card-1 .card__description-heading,
