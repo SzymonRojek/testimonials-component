@@ -116,6 +116,9 @@ html {
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
   position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
 }
 
 .card__header {
