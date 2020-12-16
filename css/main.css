@@ -32,6 +32,12 @@ html {
   clear: both;
 }
 
+.stop__flickers {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
 .component__wrapper {
   min-height: 100vh;
   max-width: 1440px;
@@ -116,14 +122,13 @@ html {
   transition: transform 1s ease;
   transition: transform 1s ease, -webkit-transform 1s ease;
   position: relative;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
 }
 
 .card__header {
   line-height: 17px;
   letter-spacing: 0.5px;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .card__header-img {
@@ -164,7 +169,7 @@ html {
 
 .card-1 {
   background: url("../images/bg-pattern-quotation.svg") #7541c8 no-repeat;
-  background-position: 85% top;
+  background-position: 84% top;
   background-size: 8rem 8.2rem;
 }
 
