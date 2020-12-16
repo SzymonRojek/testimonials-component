@@ -103,20 +103,20 @@ html {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-twoSections > * + *  {
+.cards__wrapperSections > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-section-one > * + *  {
+.cards__wrapperSections-one > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-section-two > * + *  {
+.cards__wrapperSections-two > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-section-one, 
-.cards__wrapper-section-two {
+.cards__wrapperSections-one, 
+.cards__wrapperSections-two {
   display: flex;
   flex-direction: column;
 }
@@ -176,27 +176,28 @@ html {
 .card__header {
   line-height: 17px;
   letter-spacing: 0.5px;
-}
-.card__header-img {
-  height: 2rem;
-  border-radius: 50%;
-  float: left;
-  margin-right: 1.2rem;
+
+  &-img {
+    height: 2rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: 1.2rem;
+  }
+
+  &-person {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  &-graduate {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
 }
 
 .card-1 .card__header-img,
 .card-4 .card__header-img {
   border: 2px solid $bc__violet-light;
-}
-
-.card__header-person {
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.card__header-graduate {
-  font-size: 0.7rem;
-  font-weight: 500;
 }
 
 .card-1 .card__header-person, 
@@ -223,14 +224,21 @@ html {
 
 .card__description {
   padding-top: 1.5rem;
-}
 
-.card__description-heading {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.7rem;
-  width: 100%;
-  height: 100%;
+  &-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-blockquote{
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    padding-top: 1.5rem;
+  }
 }
 
 .card-1 .card__description-heading,
@@ -247,13 +255,6 @@ html {
   color: $color__gray-700;
 }
 
-.card__description-blockquote{
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  padding-top: 1.5rem;
-}
-
 .card-1 .card__description-blockquote{
   color: $color__gray-300;
 }
@@ -268,17 +269,18 @@ html {
   color: $color__gray-500;
 }
 
+
 @media (min-width: 767px) {
-  .cards__wrapper-section-one, 
-  .cards__wrapper-section-two {
+  .cards__wrapperSections-one, 
+  .cards__wrapperSections-two {
     flex-direction: row;
    }
 
-  .cards__wrapper-section-one > * + * {
+  .cards__wrapperSections-one > * + * {
      margin: 0 0 0 1.5rem;
    }
 
-   .cards__wrapper-section-two  > * + *  {
+   .cards__wrapperSections-two  > * + *  {
      margin: 0 0 0 1.5rem;
    }
 
@@ -307,7 +309,7 @@ html {
     flex-direction: row;
   }
 
-  .cards__wrapper-twoSections {
+  .cards__wrapperSections {
     flex: 3;
   }
 

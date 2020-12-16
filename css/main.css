@@ -103,20 +103,20 @@ html {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-twoSections > * + * {
+.cards__wrapperSections > * + * {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-section-one > * + * {
+.cards__wrapperSections-one > * + * {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-section-two > * + * {
+.cards__wrapperSections-two > * + * {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapper-section-one,
-.cards__wrapper-section-two {
+.cards__wrapperSections-one,
+.cards__wrapperSections-two {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,11 +195,6 @@ html {
   margin-right: 1.2rem;
 }
 
-.card-1 .card__header-img,
-.card-4 .card__header-img {
-  border: 2px solid #a775f1;
-}
-
 .card__header-person {
   font-weight: 500;
   font-size: 1rem;
@@ -208,6 +203,11 @@ html {
 .card__header-graduate {
   font-size: 0.7rem;
   font-weight: 500;
+}
+
+.card-1 .card__header-img,
+.card-4 .card__header-img {
+  border: 2px solid #a775f1;
 }
 
 .card-1 .card__header-person,
@@ -244,6 +244,13 @@ html {
   height: 100%;
 }
 
+.card__description-blockquote {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4rem;
+  padding-top: 1.5rem;
+}
+
 .card-1 .card__description-heading,
 .card-2 .card__description-heading {
   color: white;
@@ -256,13 +263,6 @@ html {
 .card-3 .card__description-heading,
 .card-5 .card__description-heading {
   color: #48556a;
-}
-
-.card__description-blockquote {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  padding-top: 1.5rem;
 }
 
 .card-1 .card__description-blockquote {
@@ -280,17 +280,17 @@ html {
 }
 
 @media (min-width: 767px) {
-  .cards__wrapper-section-one,
-  .cards__wrapper-section-two {
+  .cards__wrapperSections-one,
+  .cards__wrapperSections-two {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .cards__wrapper-section-one > * + * {
+  .cards__wrapperSections-one > * + * {
     margin: 0 0 0 1.5rem;
   }
-  .cards__wrapper-section-two > * + * {
+  .cards__wrapperSections-two > * + * {
     margin: 0 0 0 1.5rem;
   }
   .card-1, .card-4 {
@@ -321,7 +321,7 @@ html {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .cards__wrapper-twoSections {
+  .cards__wrapperSections {
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
