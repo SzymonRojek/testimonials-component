@@ -114,7 +114,7 @@ html {
 }
 
 .card {
-  padding: 1.63rem 2rem;
+  padding: 1.4rem 1.4rem;
   border-radius: 0.5rem;
   background-color: #ecf2f8;
   -webkit-transition: -webkit-transform 1s ease;
@@ -125,17 +125,17 @@ html {
 }
 
 .card__header {
+  padding: 2px;
   line-height: 17px;
   letter-spacing: 0.5px;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 .card__header-img {
-  height: 2rem;
-  border-radius: 50%;
   float: left;
+  display: block;
+  height: 2.3rem;
   margin-right: 1.2rem;
+  border-radius: 50%;
 }
 
 .card__header-person {
@@ -149,15 +149,13 @@ html {
 }
 
 .card__description {
-  padding-top: 1.5rem;
+  padding-top: 1.4rem;
 }
 
 .card__description-heading {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.7rem;
-  width: 100%;
-  height: 100%;
 }
 
 .card__description-blockquote {
