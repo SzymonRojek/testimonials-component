@@ -63,6 +63,17 @@ html {
   background-color: #ecf2f8;
 }
 
+.cards__wrapperSections-one,
+.cards__wrapperSections-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .footer__attribution {
   width: 100%;
   display: -webkit-box;
@@ -107,6 +118,47 @@ html {
   position: relative;
 }
 
+.card__header {
+  line-height: 17px;
+  letter-spacing: 0.5px;
+}
+
+.card__header-img {
+  height: 2rem;
+  border-radius: 50%;
+  float: left;
+  margin-right: 1.2rem;
+}
+
+.card__header-person {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.card__header-graduate {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.card__description {
+  padding-top: 1.5rem;
+}
+
+.card__description-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.7rem;
+  width: 100%;
+  height: 100%;
+}
+
+.card__description-blockquote {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4rem;
+  padding-top: 1.5rem;
+}
+
 .card-1 {
   background: url("../images/bg-pattern-quotation.svg") #7541c8 no-repeat;
   background-position: 85% top;
@@ -130,47 +182,6 @@ html {
   background-color: white;
 }
 
-.card .card__header {
-  line-height: 17px;
-  letter-spacing: 0.5px;
-}
-
-.card .card__header-img {
-  height: 2rem;
-  border-radius: 50%;
-  float: left;
-  margin-right: 1.2rem;
-}
-
-.card .card__header-person {
-  font-weight: 500;
-  font-size: 1rem;
-}
-
-.card .card__header-graduate {
-  font-size: 0.7rem;
-  font-weight: 500;
-}
-
-.card .card__description {
-  padding-top: 1.5rem;
-}
-
-.card .card__description-heading {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.7rem;
-  width: 100%;
-  height: 100%;
-}
-
-.card .card__description-blockquote {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.4rem;
-  padding-top: 1.5rem;
-}
-
 /*
 > * + * select every element that is a sibling of another 
 / adjacent sibling of something else - set the margin between boxes.
@@ -189,17 +200,6 @@ html {
 
 .cards__wrapperSections-two > * + * {
   margin: 1.5rem 0 0 0;
-}
-
-.cards__wrapperSections-one,
-.cards__wrapperSections-two {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .pseudo-hover:hover {
