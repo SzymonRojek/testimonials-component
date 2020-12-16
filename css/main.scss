@@ -116,6 +116,7 @@ html {
   border-radius: 0.5rem;
   background-color: $base-bc__gray-100;
   transition: transform 1s ease;
+  overflow: hidden;
   position: relative;
 
     &__header {
