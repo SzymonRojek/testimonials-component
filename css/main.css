@@ -184,6 +184,16 @@ html {
   margin-right: 1.2rem;
 }
 
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .clearfix::after {
   content: '';
   visibility: hidden;
@@ -231,10 +241,10 @@ html {
 
 .card__description {
   height: 100%;
-  padding-top: 2rem;
 }
 
 .card__description-heading {
+  padding-top: 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem;
