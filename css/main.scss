@@ -115,7 +115,6 @@ html {
   background-color: $base-bc__gray-100;
   transition: transform 1s ease;
   position: relative;
- 
 }
 
 .pseudo-hover:hover {
@@ -171,13 +170,8 @@ html {
   border-radius: 50%;
   float: left;
   margin-right: 1.2rem;
- 
 }
 
-.about {
-  display: flex;
-  flex-direction: column;
-}
 .clearfix::after { 
   content: '';
   visibility: hidden;
@@ -224,15 +218,13 @@ html {
 }
 
 .card__description {
-  height: 100%;
- 
+  padding-top: 1.5rem;
 }
 
 .card__description-heading {
-  padding-top: 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
-  line-height: 1.5rem;
+  line-height: 1.7rem;
 }
 
 .card-1 .card__description-heading,
@@ -252,8 +244,8 @@ html {
 .card__description-blockquote{
   font-style: normal;
   font-weight: 500;
-  line-height: 1.125rem;
-  padding: 1rem 0 1.4rem 0;
+  line-height: 1.4rem;
+  padding-top: 1.5rem;
 }
 
 .card-1 .card__description-blockquote{
@@ -291,14 +283,6 @@ html {
    .card-2, .card-3 {
      flex: 1;
    }
-
-  .card__description-heading {
-    line-height: 1.7rem;
-  }
-
-  .card__description-blockquote {
-    line-height: 1.5rem;
-  }
  }
  
  @media (min-width: 1024px) {
