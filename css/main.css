@@ -113,18 +113,16 @@ body {
 }
 
 .card {
+  position: relative;
+  display: inline-block;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: #ecf2f8;
-  -webkit-transition: -webkit-transform 1s ease;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   overflow: hidden;
-  position: relative;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
 }
 
 .card__header {
@@ -196,23 +194,24 @@ body {
   background-color: white;
 }
 
-.card:hover {
-  -webkit-transform: translateY(-0.35em) scale(1.02);
-          transform: translateY(-0.35em) scale(1.02);
-}
-
 .card::after {
   content: '';
   position: absolute;
+  z-index: -1;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  -webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
   opacity: 0;
-  -webkit-box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
-          box-shadow: 0 0.5rem 3rem -0.25em rgba(35, 21, 21, 0.3);
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  -webkit-transform: scale(1.04, 1.04);
+          transform: scale(1.04, 1.04);
 }
 
 .card:hover::after {
