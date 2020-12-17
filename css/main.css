@@ -37,12 +37,6 @@ body {
   clear: both;
 }
 
-.stop__flickers {
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-}
-
 .component__wrapper {
   min-height: 100vh;
   max-width: 1440px;
@@ -119,7 +113,7 @@ body {
 }
 
 .card {
-  padding: 1.4rem 1.4rem;
+  padding: 1.3rem 1.4rem;
   border-radius: 0.5rem;
   background-color: #ecf2f8;
   -webkit-transition: -webkit-transform 1s ease;
@@ -131,35 +125,39 @@ body {
 }
 
 .card__header {
-  line-height: 17px;
   letter-spacing: 0.5px;
 }
 
-.card__header-img {
+.card__header-avatar {
+  height: 2.72rem;
   float: left;
-  display: block;
-  height: 2.3rem;
-  margin-right: 1.2rem;
+  margin-right: 1.5rem;
+}
+
+.card__header-avatar img {
+  height: 100%;
   border-radius: 50%;
 }
 
 .card__header-person {
-  padding-top: 0.3rem;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .card__header-graduate {
+  padding: 0.42rem 0 0.43rem 0;
   font-size: 0.7rem;
   font-weight: 500;
 }
 
 .card__description {
-  padding-top: 1.2rem;
+  padding-top: 1rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .card__description-heading {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
@@ -237,9 +235,18 @@ body {
   margin: 1.5rem 0 0 0;
 }
 
-.card-1 .card__header-img,
-.card-4 .card__header-img {
+.card-1 .card__header-avatar img,
+.card-4 .card__header-avatar img {
   border: 2px solid #a775f1;
+}
+
+.card-2 .card__header-avatar img {
+  border: 2px solid white;
+}
+
+.card-3 .card__header-avatar img,
+.card-5 .card__header-avatar img {
+  border: 2px solid rgba(72, 85, 106, 0.7);
 }
 
 .card-1 .card__header-person,
