@@ -219,7 +219,7 @@ body {
 
 /*
 > * + * select every element that is a sibling of another 
-/ adjacent sibling of something else - set the margin between boxes.
+/ adjacent sibling of something else - set the margin between boxes (gaps).
 */
 .cards__container > * + * {
   margin: 1.5rem 0 0 0;
@@ -244,7 +244,9 @@ body {
 
 .card-1 .card__header-person,
 .card-2 .card__header-person,
-.card-4 .card__header-person {
+.card-4 .card__header-person,
+.card-1 .card__description-heading,
+.card-2 .card__description-heading {
   color: white;
 }
 
@@ -255,7 +257,9 @@ body {
 }
 
 .card-3 .card__header-person,
-.card-5 .card__header-person {
+.card-5 .card__header-person,
+.card-3 .card__description-heading,
+.card-5 .card__description-heading {
   color: #48556a;
 }
 
@@ -264,18 +268,8 @@ body {
   color: rgba(72, 85, 106, 0.5);
 }
 
-.card-1 .card__description-heading,
-.card-2 .card__description-heading {
-  color: white;
-}
-
 .card-4 .card__description-heading {
   color: #ecf2f8;
-}
-
-.card-3 .card__description-heading,
-.card-5 .card__description-heading {
-  color: #48556a;
 }
 
 .card-1 .card__description-blockquote {
