@@ -2,24 +2,18 @@
 // Variables
 $font-primary: 'Barlow Semi Condensed', sans-serif;
 
-// fonts-color:
-$color-primary__white: rgb(255, 255, 255);
+$primary__white: rgb(255, 255, 255);
       
-$color__gray-100:rgb(236, 242, 248);
-$color__gray-200:rgba(255, 255, 255, 0.70);
-$color__gray-300:rgba(207, 207, 207, 0.70);
-$color__gray-400:rgba(255, 255, 255, 0.50); 
-$color__gray-500:rgba(72, 85, 106, 0.70);
-$color__gray-600:rgba(72, 85, 106, 0.50);
-$color__gray-700:rgb(72, 85, 106);
-      
-// background-color:
-$base-bc__gray-100: rgb(236, 242, 248);
-$bc__white: rgb(255, 255, 255);
-$bc__gray-700: rgb(72, 85, 106);
-$bc__black-dark: rgb(25, 33, 46);
-$bc__violet-light: rgb(167, 117, 241);
-$bc__violet-dark:rgb(117, 65, 200);
+$gray-100:rgb(236, 242, 248);
+$gray-200:rgba(255, 255, 255, 0.70);
+$gray-300:rgba(207, 207, 207, 0.70);
+$gray-400:rgba(255, 255, 255, 0.50); 
+$gray-500:rgba(72, 85, 106, 0.70);
+$gray-600:rgba(72, 85, 106, 0.50);
+$gray-700:rgb(72, 85, 106);
+$black-dark: rgb(25, 33, 46);
+$violet-light: rgb(167, 117, 241);
+$violet-dark:rgb(117, 65, 200);
 
 *, 
 *::after, 
@@ -37,7 +31,7 @@ html {
 body {
   font-size: 81.25%; // 13px
   font-family: $font-primary;
-  background-color: $base-bc__gray-100;
+  background-color: $gray-100;
   text-rendering: optimizeSpeed;
 }
 
@@ -84,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 3.5rem 1.5rem;
-  background-color: $base-bc__gray-100;
+  background-color: $gray-100;
 }
 
 .cards__wrapperSections-one, 
@@ -100,11 +94,11 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 0 1rem 0;
-  background-color: $bc__black-dark;
-  border-top: 2px solid $bc__violet-light;
+  background-color: $black-dark;
+  border-top: 2px solid $violet-light;
 
   &-text {
-    color: $color-primary__white;
+    color: $primary__white;
     font-size: 0.8rem;
     letter-spacing: 1px;
   }
@@ -113,14 +107,14 @@ body {
     display: inline-block;
     padding-top: 0.5em;
     text-decoration: none;
-    color: $color__gray-200;
+    color: $gray-200;
   }
 }
 
 .card {
   padding: 1.4rem 1.4rem;
   border-radius: 0.5rem;
-  background-color: $base-bc__gray-100;
+  background-color: $gray-100;
   transition: transform 1s ease;
   overflow: hidden;
   position: relative;
@@ -150,7 +144,7 @@ body {
   }
 
     &__description {
-      padding-top: .4rem;
+      padding-top: 1.2rem;
 
       &-heading {
         font-size: 1.1rem;
@@ -167,26 +161,26 @@ body {
     }
 
     &-1 {
-      background: url('../images/bg-pattern-quotation.svg') $bc__violet-dark no-repeat;
+      background: url('../images/bg-pattern-quotation.svg') $violet-dark no-repeat;
       background-position: 80% top;
       background-size: 8rem 8.2rem;
     }
     
     &-2 {
-      background-color: $bc__gray-700;
+      background-color: $gray-700;
     }
     
     &-3 {
-      background-color: $bc__white;
+      background-color: $primary__white;
     }
     
     &-4 {
-      background-color: $bc__black-dark;
+      background-color: $black-dark;
     }
     
     &-5 {
-      color: $color__gray-600;
-      background-color: $bc__white;
+      color: $gray-600;
+      background-color: $primary__white;
     }
 
     // box shadow sily smooth performance on hover
@@ -235,57 +229,57 @@ body {
 // set colors
 .card-1 .card__header-img,
 .card-4 .card__header-img {
-  border: 2px solid $bc__violet-light;
+  border: 2px solid $violet-light;
 }
 
 .card-1 .card__header-person, 
 .card-2 .card__header-person,
 .card-4 .card__header-person {
-  color: $color-primary__white;
+  color: $primary__white;
 }
 
 .card-1 .card__header-graduate,
 .card-2 .card__header-graduate,
 .card-4 .card__header-graduate{
-  color: $color__gray-400;
+  color: $gray-400;
 }
 
 .card-3 .card__header-person,
 .card-5 .card__header-person {
-  color: $color__gray-700; 
+  color: $gray-700; 
 }
 
 .card-3 .card__header-graduate,
 .card-5 .card__header-graduate {
-  color: $color__gray-600;
+  color: $gray-600;
 }
 
 .card-1 .card__description-heading,
 .card-2 .card__description-heading {
-  color: $color-primary__white;
+  color: $primary__white;
 }
 
 .card-4 .card__description-heading {
-  color: $color__gray-100;
+  color: $gray-100;
 }
 
 .card-3 .card__description-heading,
 .card-5 .card__description-heading {
-  color: $color__gray-700;
+  color: $gray-700;
 }
 
 .card-1 .card__description-blockquote{
-  color: $color__gray-300;
+  color: $gray-300;
 }
 
 .card-2 .card__description-blockquote,
 .card-4 .card__description-blockquote{
-  color: $color__gray-200;
+  color: $gray-200;
 }
 
 .card-3 .card__description-blockquote,
 .card-5 .card__description-blockquote{
-  color: $color__gray-500;
+  color: $gray-500;
 }
 
 
