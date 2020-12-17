@@ -122,6 +122,9 @@ body {
   transition: transform 1s ease, -webkit-transform 1s ease;
   overflow: hidden;
   position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
 }
 
 .card__header {
@@ -145,12 +148,13 @@ body {
 }
 
 .card__header-graduate {
-  padding: 0.42rem 0 0.43rem 0;
+  padding: 0.40rem 0 0.43rem 0;
   font-size: 0.7rem;
   font-weight: 500;
 }
 
 .card__description {
+  margin-top: 0.3rem;
   padding-top: 1rem;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;

@@ -118,6 +118,9 @@ body {
   transition: transform 1s ease;
   overflow: hidden;
   position: relative;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
 
     &__header {
       letter-spacing: 0.5px;
@@ -139,13 +142,14 @@ body {
       }
     
       &-graduate {
-        padding: 0.42rem 0 0.43rem 0;
+        padding: 0.40rem 0 0.43rem 0;
         font-size: 0.7rem;
         font-weight: 500;
       }
   }
 
     &__description {
+      margin-top: 0.3rem;
       padding-top: 1rem;
       backface-visibility: hidden;
 
