@@ -194,30 +194,6 @@ body {
   background-color: white;
 }
 
-.card::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 10px 12px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.card:hover {
-  -webkit-transform: scale(1.04, 1.04);
-          transform: scale(1.04, 1.04);
-}
-
-.card:hover::after {
-  opacity: 1;
-}
-
 /*
 > * + * select every element that is a sibling of another 
 / adjacent sibling of something else - set the margin between boxes (gaps).
