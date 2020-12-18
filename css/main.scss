@@ -33,6 +33,7 @@ body {
   font-family: $font-primary;
   background-color: $gray-100;
   text-rendering: optimizeSpeed;
+  position: relative;
 }
 
 .screen-reader-only {
@@ -60,6 +61,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 
 .cards__container {
@@ -258,53 +260,39 @@ body {
 }
 
 @media (min-width: 767px) {
+  .component__wrapper {
+    align-items: center;
+    flex-direction: center;
+  }
   .cards__wrapperSections-one, 
   .cards__wrapperSections-two {
     flex-direction: row;
    }
-
   .cards__wrapperSections-one > * + * {
      margin: 0 0 0 1.5rem;
    }
-
    .cards__wrapperSections-two  > * + *  {
      margin: 0 0 0 1.5rem;
    }
-
    .card-1, .card-4 {
      flex: 2;
    }
-
    .card-2, .card-3 {
      flex: 1;
    }
  }
  
  @media (min-width: 1024px) {
-  .component__wrapper {
-    position: relative;
-  }
-
-  .footer__attribution {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
   .cards__container {
     flex-direction: row;
   }
-
   .cards__wrapperSections {
     flex: 3;
   }
-
   .last__section {
     flex: 1;
     margin: 0 0 0 1.5rem;
   }
-
   .card-5 {
     height: 100%;
   }
