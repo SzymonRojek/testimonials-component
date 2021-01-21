@@ -24,6 +24,11 @@ html {
   box-sizing: border-box;
 }
 
+img {
+	max-width: 100%;
+	display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,14 +48,6 @@ body {
   clip: rect(1px,1px,1px,1px);
   clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
   overflow: hidden !important;
-}
-
-.clearfix::after { 
-  content: '';
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
 }
 
 .main__wrapper {
@@ -78,11 +75,11 @@ body {
 }
 
 .footer__attribution {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   padding: 0.5rem 0 1rem 0;
   background-color: $black-dark;
   border-top: 2px solid $violet-light;
@@ -103,7 +100,6 @@ body {
 
 .card {
   position: relative;
-  display: inline-block;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: $gray-100;
@@ -111,17 +107,15 @@ body {
   overflow: hidden;
 
     &__header {
+      display: flex;
       letter-spacing: 0.5px;
       
-      &-avatar {
-        height: 2.5rem;
-        float: left;
-        margin-right: 1.5rem;
       
-        img {
-          height: 100%;
-          border-radius: 50%;
-        }
+      &-avatar {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1.5rem;
+        border-radius: 50%;
       }
     
       &-person {
@@ -129,7 +123,7 @@ body {
         font-size: 0.9rem;
       }
     
-      &-graduate {
+      &-status {
         padding: 0.40rem 0 0.43rem 0;
         font-size: 0.7rem;
         font-weight: 500;
@@ -141,7 +135,7 @@ body {
       padding-top: 1rem;
       backface-visibility: hidden;
 
-      &-heading {
+      &-introduction {
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.5rem;
@@ -159,23 +153,42 @@ body {
       background: url('../images/bg-pattern-quotation.svg') $violet-dark no-repeat;
       background-position: 80% top;
       background-size: 8rem 8.2rem;
+
+      .card__header-avatar{
+        border: 2px solid $violet-light;
+      }
     }
     
     &-2 {
       background-color: $gray-700;
+      .card__header-avatar{
+        border: 2px solid $primary__white;
+      }
     }
     
     &-3 {
       background-color: $primary__white;
+
+      .card__header-avatar{
+        border: 2px solid $gray-500;
+      }
     }
     
     &-4 {
       background-color: $black-dark;
+
+      .card__header-avatar{
+        border: 2px solid $violet-light;
+      }
     }
     
     &-5 {
       color: $gray-600;
       background-color: $primary__white;
+
+      .card__header-avatar{
+        border: 2px solid $gray-500;
+      }
     }
 }
 
@@ -202,47 +215,34 @@ body {
 }
 
 // set colors
-.card-1 .card__header-avatar img,
-.card-4 .card__header-avatar img {
-  border: 2px solid $violet-light;
-}
-
-.card-2 .card__header-avatar img {
-  border: 2px solid $primary__white;
-}
-
-.card-3 .card__header-avatar img,
-.card-5 .card__header-avatar img {
-  border: 2px solid $gray-500
-}
 
 .card-1 .card__header-person, 
 .card-2 .card__header-person,
 .card-4 .card__header-person,
-.card-1 .card__description-heading,
-.card-2 .card__description-heading {
+.card-1 .card__description-introduction,
+.card-2 .card__description-introduction {
   color: $primary__white;
 }
 
-.card-1 .card__header-graduate,
-.card-2 .card__header-graduate,
-.card-4 .card__header-graduate{
+.card-1 .card__header-status,
+.card-2 .card__header-status,
+.card-4 .card__header-status{
   color: $gray-400;
 }
 
 .card-3 .card__header-person,
 .card-5 .card__header-person,
-.card-3 .card__description-heading,
-.card-5 .card__description-heading  {
+.card-3 .card__description-introduction,
+.card-5 .card__description-introduction  {
   color: $gray-700; 
 }
 
-.card-3 .card__header-graduate,
-.card-5 .card__header-graduate {
+.card-3 .card__header-status,
+.card-5 .card__header-status {
   color: $gray-600;
 }
 
-.card-4 .card__description-heading {
+.card-4 .card__description-introduction {
   color: $gray-100;
 }
 
@@ -261,11 +261,6 @@ body {
 }
 
 @media (min-width: 767px) {
-  .main__wrapper {
-    align-items: center;
-    flex-direction: center;
-  }
-
   .cards__wrapper-one-two,
   .cards__wrapper-three-four {
     flex-direction: row;

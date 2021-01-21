@@ -8,6 +8,11 @@ html {
           box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,14 +33,6 @@ body {
   -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
           clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
   overflow: hidden !important;
-}
-
-.clearfix::after {
-  content: '';
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
 }
 
 .main__wrapper {
@@ -81,7 +78,6 @@ body {
 }
 
 .footer__attribution {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,6 +91,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
   padding: 0.5rem 0 1rem 0;
   background-color: #19212e;
   border-top: 2px solid #a775f1;
@@ -115,7 +112,6 @@ body {
 
 .card {
   position: relative;
-  display: inline-block;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: #ecf2f8;
@@ -125,17 +121,16 @@ body {
 }
 
 .card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   letter-spacing: 0.5px;
 }
 
 .card__header-avatar {
-  height: 2.5rem;
-  float: left;
+  height: 3rem;
+  width: 3rem;
   margin-right: 1.5rem;
-}
-
-.card__header-avatar img {
-  height: 100%;
   border-radius: 50%;
 }
 
@@ -144,7 +139,7 @@ body {
   font-size: 0.9rem;
 }
 
-.card__header-graduate {
+.card__header-status {
   padding: 0.40rem 0 0.43rem 0;
   font-size: 0.7rem;
   font-weight: 500;
@@ -157,7 +152,7 @@ body {
           backface-visibility: hidden;
 }
 
-.card__description-heading {
+.card__description-introduction {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
@@ -176,21 +171,41 @@ body {
   background-size: 8rem 8.2rem;
 }
 
+.card-1 .card__header-avatar {
+  border: 2px solid #a775f1;
+}
+
 .card-2 {
   background-color: #48556a;
+}
+
+.card-2 .card__header-avatar {
+  border: 2px solid white;
 }
 
 .card-3 {
   background-color: white;
 }
 
+.card-3 .card__header-avatar {
+  border: 2px solid rgba(72, 85, 106, 0.7);
+}
+
 .card-4 {
   background-color: #19212e;
+}
+
+.card-4 .card__header-avatar {
+  border: 2px solid #a775f1;
 }
 
 .card-5 {
   color: rgba(72, 85, 106, 0.5);
   background-color: white;
+}
+
+.card-5 .card__header-avatar {
+  border: 2px solid rgba(72, 85, 106, 0.7);
 }
 
 /*
@@ -213,47 +228,33 @@ body {
   margin: 1.5rem 0 0 0;
 }
 
-.card-1 .card__header-avatar img,
-.card-4 .card__header-avatar img {
-  border: 2px solid #a775f1;
-}
-
-.card-2 .card__header-avatar img {
-  border: 2px solid white;
-}
-
-.card-3 .card__header-avatar img,
-.card-5 .card__header-avatar img {
-  border: 2px solid rgba(72, 85, 106, 0.7);
-}
-
 .card-1 .card__header-person,
 .card-2 .card__header-person,
 .card-4 .card__header-person,
-.card-1 .card__description-heading,
-.card-2 .card__description-heading {
+.card-1 .card__description-introduction,
+.card-2 .card__description-introduction {
   color: white;
 }
 
-.card-1 .card__header-graduate,
-.card-2 .card__header-graduate,
-.card-4 .card__header-graduate {
+.card-1 .card__header-status,
+.card-2 .card__header-status,
+.card-4 .card__header-status {
   color: rgba(255, 255, 255, 0.5);
 }
 
 .card-3 .card__header-person,
 .card-5 .card__header-person,
-.card-3 .card__description-heading,
-.card-5 .card__description-heading {
+.card-3 .card__description-introduction,
+.card-5 .card__description-introduction {
   color: #48556a;
 }
 
-.card-3 .card__header-graduate,
-.card-5 .card__header-graduate {
+.card-3 .card__header-status,
+.card-5 .card__header-status {
   color: rgba(72, 85, 106, 0.5);
 }
 
-.card-4 .card__description-heading {
+.card-4 .card__description-introduction {
   color: #ecf2f8;
 }
 
@@ -272,15 +273,6 @@ body {
 }
 
 @media (min-width: 767px) {
-  .main__wrapper {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: center;
-            flex-direction: center;
-  }
   .cards__wrapper-one-two,
   .cards__wrapper-three-four {
     -webkit-box-orient: horizontal;
