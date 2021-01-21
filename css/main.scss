@@ -53,7 +53,7 @@ body {
   clear: both;
 }
 
-.component__wrapper {
+.main__wrapper {
   min-height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
@@ -64,15 +64,15 @@ body {
  
 }
 
-.cards__container {
+.cards__wrapper {
   display: flex;
   flex-direction: column;
   margin: 3.5rem 1.5rem;
   background-color: $gray-100;
 }
 
-.cards__wrapperSections-one, 
-.cards__wrapperSections-two {
+.cards__wrapper-one-two,
+.cards__wrapper-three-four {
   display: flex;
   flex-direction: column;
 }
@@ -184,19 +184,20 @@ body {
 / adjacent sibling of something else - set the margin between boxes (gaps).
 */
 
-.cards__container > * + *  {
+
+.cards__wrapper > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapperSections > * + *  {
+.cards__wrapper-fourCards > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapperSections-one > * + *  {
+.cards__wrapper-one-two > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapperSections-two > * + *  {
+.cards__wrapper-three-four > * + *  {
   margin: 1.5rem 0 0 0;
 }
 
@@ -260,36 +261,41 @@ body {
 }
 
 @media (min-width: 767px) {
-  .component__wrapper {
+  .main__wrapper {
     align-items: center;
     flex-direction: center;
   }
-  .cards__wrapperSections-one, 
-  .cards__wrapperSections-two {
+
+  .cards__wrapper-one-two,
+  .cards__wrapper-three-four {
     flex-direction: row;
    }
-  .cards__wrapperSections-one > * + * {
-     margin: 0 0 0 1.5rem;
-   }
-   .cards__wrapperSections-two  > * + *  {
-     margin: 0 0 0 1.5rem;
-   }
-   .card-1, .card-4 {
-     flex: 2;
-   }
-   .card-2, .card-3 {
-     flex: 1;
-   }
- }
+
+  .cards__wrapper-one-two  > * + * {
+    margin: 0 0 0 1.5rem;
+  }
+
+  .cards__wrapper-three-four  > * + * {
+    margin: 0 0 0 1.5rem;
+  }
+
+  .card-1, .card-4 {
+    flex: 2;
+  }
+
+  .card-2, .card-3 {
+    flex: 1;
+  }
+}
  
  @media (min-width: 1024px) {
-  .cards__container {
+  .cards__wrapper {
     flex-direction: row;
   }
-  .cards__wrapperSections {
+  .cards__wrapper-fourCards {
     flex: 3;
   }
-  .last__section {
+  .card_wrapper-lastCard {
     flex: 1;
     margin: 0 0 0 1.5rem;
   }

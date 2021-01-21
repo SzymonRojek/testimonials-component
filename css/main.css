@@ -38,7 +38,7 @@ body {
   clear: both;
 }
 
-.component__wrapper {
+.main__wrapper {
   min-height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
@@ -57,7 +57,7 @@ body {
           align-items: center;
 }
 
-.cards__container {
+.cards__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,8 +69,8 @@ body {
   background-color: #ecf2f8;
 }
 
-.cards__wrapperSections-one,
-.cards__wrapperSections-two {
+.cards__wrapper-one-two,
+.cards__wrapper-three-four {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,19 +197,19 @@ body {
 > * + * select every element that is a sibling of another 
 / adjacent sibling of something else - set the margin between boxes (gaps).
 */
-.cards__container > * + * {
+.cards__wrapper > * + * {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapperSections > * + * {
+.cards__wrapper-fourCards > * + * {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapperSections-one > * + * {
+.cards__wrapper-one-two > * + * {
   margin: 1.5rem 0 0 0;
 }
 
-.cards__wrapperSections-two > * + * {
+.cards__wrapper-three-four > * + * {
   margin: 1.5rem 0 0 0;
 }
 
@@ -272,7 +272,7 @@ body {
 }
 
 @media (min-width: 767px) {
-  .component__wrapper {
+  .main__wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -281,17 +281,17 @@ body {
         -ms-flex-direction: center;
             flex-direction: center;
   }
-  .cards__wrapperSections-one,
-  .cards__wrapperSections-two {
+  .cards__wrapper-one-two,
+  .cards__wrapper-three-four {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .cards__wrapperSections-one > * + * {
+  .cards__wrapper-one-two > * + * {
     margin: 0 0 0 1.5rem;
   }
-  .cards__wrapperSections-two > * + * {
+  .cards__wrapper-three-four > * + * {
     margin: 0 0 0 1.5rem;
   }
   .card-1, .card-4 {
@@ -307,18 +307,18 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .cards__container {
+  .cards__wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .cards__wrapperSections {
+  .cards__wrapper-fourCards {
     -webkit-box-flex: 3;
         -ms-flex: 3;
             flex: 3;
   }
-  .last__section {
+  .card_wrapper-lastCard {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
