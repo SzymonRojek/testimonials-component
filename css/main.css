@@ -111,7 +111,6 @@ body {
 }
 
 .card {
-  position: relative;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: #ecf2f8;
@@ -304,6 +303,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 100%;
   }
   .cards__wrapper-fourCards {
     -webkit-box-flex: 3;
@@ -317,7 +317,8 @@ body {
     margin: 0 0 0 1.5rem;
   }
   .card-5 {
-    height: 100%;
+    margin: 1.5rem 0 0 0;
+    height: 96.50%;
   }
 }
 /*# sourceMappingURL=main.css.map */

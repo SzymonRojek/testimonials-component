@@ -99,7 +99,6 @@ body {
 }
 
 .card {
-  position: relative;
   padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: $gray-100;
@@ -286,6 +285,7 @@ body {
  @media (min-width: 1024px) {
   .cards__wrapper {
     flex-direction: row;
+    height: 100%;
   }
   .cards__wrapper-fourCards {
     flex: 3;
@@ -294,7 +294,9 @@ body {
     flex: 1;
     margin: 0 0 0 1.5rem;
   }
+
   .card-5 {
-    height: 100%;
+    margin: 1.5rem 0 0 0;
+    height: 96.50%;
   }
 }
