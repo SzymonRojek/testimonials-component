@@ -1,13 +1,9 @@
 
-# Testimonials Section Main
+# Testimonials Section
 
-## 🎥 Prewiev site [here](https://szymonrojek.github.io/testimonials-flexBox-section-main/)
+## 🎥 Prewiev site :arrow_right: [here](https://szymonrojek.github.io/testimonials-flexBox-section-main/)
 
-[Frontendmentor.io](https://www.frontendmentor.io/dashboard) challenge to build Testmimonials Component using HTML and CSS:
-* build out the project and get it looking as close to the design as [possible](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7) &#8592; check it out the link or the design folder.
-* view the optimal layout for the site depending on device's screen sizel
-
-## **For this challenge I've used:**
+## For this project I have used:
 * [x] HTML semantic elements;
 * [x] Invisible content just for Screen Reader users;
 * [x] Pseudo-elements for background images;
@@ -24,6 +20,8 @@ I could use any tools I like to help me to complete the challenge. Due to the fa
 
 Already at this stage of learning, I know that the flexbox is not good for building complex layouts in the general sense but definitely it is amazing for setting content inside of elements.
 
-## Setup
+## Setup:
 
-Clone this repo to your desktop and run this project locally using npm to install all the dependencies.
+Clone this repo to your desktop and run this project locally.
+
+The challenge comes from the website [Frontendmentor.io](https://www.frontendmentor.io/dashboard).
