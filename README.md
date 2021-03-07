@@ -16,6 +16,7 @@
 
 ### Building project - description challenge:
 
+
 I could use any tools I like to help me to complete the challenge. Due to the fact that I do not feel comfortable with the grid yet, instead of it, I have used the flexbox. Firstly, I need to master the flexbox because is a very powerful technology and I want to familiarize with all its details.
 
 Already at this stage of learning, I know that the flexbox is not good for building complex layouts in the general sense but definitely it is amazing for setting content inside of elements.
